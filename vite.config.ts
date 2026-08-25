@@ -9,7 +9,7 @@ export default defineConfig({
     host: true, // permite testar no telemóvel via IP local
   },
   build: {
-    target: 'es2018',
+    target: 'es2020',
     sourcemap: false,
   },
 });
