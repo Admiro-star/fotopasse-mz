@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-paper text-ink-900 font-body antialiased;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Botões grandes, fáceis de tocar em Android (mín. 44px de alvo) */
+.btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold transition-transform active:scale-[0.98] disabled:opacity-40 disabled:pointer-events-none;
+  min-height: 48px;
+}
+
+.btn-primary {
+  @apply btn bg-stamp-600 text-white shadow-card hover:bg-stamp-700;
+}
+
+.btn-secondary {
+  @apply btn bg-white text-ink-700 border border-ink-100 hover:border-ink-300;
+}
+
+.btn-ghost {
+  @apply btn bg-transparent text-ink-500 hover:bg-ink-50;
+}
+
+.card {
+  @apply rounded-2xl border border-ink-100 bg-white shadow-card;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
